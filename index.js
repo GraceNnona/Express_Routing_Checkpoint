@@ -1,5 +1,5 @@
 import express from "express";
-// import { verifyRequestTime } from "./middlewares/time.middleware.js";
+import { verifyRequestTime } from "./middlewares/time.middleware.js";
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.set("view engine", "pug");
 // seting views location
 app.set("views", "./views");
 
-// app.use(verifyRequestTime);
+app.use(verifyRequestTime);
 
 // set up middeleware to serve static files
 app.use(express.static("./public"));
